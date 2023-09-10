@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,200;1,300&family=Mulish:wght@300&family=Poppins:ital,wght@0,400;0,500;0,600;1,500&family=Roboto:ital,wght@0,300;0,400;1,100;1,300;1,400&family=Rubik:wght@300&family=Slabo+27px&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.chat-box {
+    position: relative;
+    width: 400px;
+    height: 80vh;
+    background: white;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.chat-box nav {
+    position: relative;
+    width: 100%;
+    height: 13.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #010c42;
+    border-radius: 10px 10px 0 0;
+}
+
+.chat-box nav>img {
+    width: 100px;
+    border-radius: 10px 10px 0 0;
+}
+
+.chat-box nav .btn {
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.chat-box nav .btn .button {
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 30px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+.chat-box nav .btn .button:hover {
+    scale: 1.3;
+}
+
+.chat-box nav .btn .lang{
+    scale: 1.3;
+}
+
+.chat-box section {
+    position: relative;
+    width: 100%;
+    height: 77.5%;
+    /* border: 1px solid black; */
+
+}
+
+.chat-box section .loading {
+    width: 100%;
+    height: auto;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.chat-box section .loading .load {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-box section .loading .load h6 {
+    width: 8px;
+    height: 8px;
+    background: #010c42;
+    border-radius: 50px;
+    margin: 3px 5px;
+    animation: load 1s linear infinite;
+}
+
+.chat-box section .loading .load h6:nth-child(2) {
+    animation-delay: .33s;
+}
+
+.chat-box section .loading .load h6:nth-child(3) {
+    animation-delay: .66s;
+}
+
+.chat-box section .loading .load h6 {
+    width: 8px;
+    height: 8px;
+    background: #010c42;
+    border-radius: 50px;
+    margin: 3px 5px;
+    animation: load 1s linear infinite;
+}
+
+@keyframes load {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.chat-box section #histroy {
+    position: relative;
+    width: 100%;
+    height: 93%;
+    /* border: 1px solid black; */
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+
+.chat-box section #histroy::-webkit-scrollbar {
+    display: none;
+}
+
+.chat-box section #histroy .que-box,
+.ans-box {
+    width: 90%;
+    position: relative;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 0rem;
+    margin-top: 10px;
+    overflow: unset;
+}
+
+.chat-box section #histroy .ans-box {
+    justify-content: flex-start;
+}
+
+.chat-box section #histroy p {
+    width: 80%;
+    /* border: 1px solid black; */
+    white-space: pre-wrap;
+    margin-top: 0;
+    margin-bottom: 0rem;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    word-break: break-all;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, .2), inset 5px 5px 10px rgb(0, 0, 0, .2);
+    border-radius: 10px;
+}
+
+.chat-box section #histroy .ans-box p {
+    padding-bottom: 30px;
+}
+
+.chat-box section #histroy .ans-box i {
+    position: absolute;
+    bottom: 10px;
+    left: 72%;
+    cursor: pointer;
+}
+
+.chat-box footer {
+    width: 100%;
+    height: 10%;
+    background: #010c42;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-box footer .search {
+    padding: 8px 10px;
+    background: rgba(128, 128, 128, 0.555);
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, .5);
+    transition: .3s linear;
+}
+
+.chat-box footer .search:hover {
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.761);
+}
+
+.chat-box footer .search input {
+    width: 300px;
+    border: none;
+    outline: none;
+    padding:0 10px;
+    font-weight: 600;
+    border-radius: 10px;
+    color: white;
+    background-color:rgba(128, 128, 128, 0);
+}
+
+.chat-box footer .search i {
+    cursor: pointer;
+    color: white;
+}
